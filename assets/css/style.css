@@ -1,551 +1,210 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
-
-/* Global variables */
-:root {
-  --primary: #12bdff;
-  --primary-hover: #0c8ec2;
-  --dark-primary: #1b1f24;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--dark-primary);
-  padding: 25px;
-  color: #fff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 1;
-}
-
-header .logo {
-  color: var(--primary);
-  margin-right: 130px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-header ul {
-  display: flex;
-  list-style: none;
-}
-
-header ul li {
-  margin-right: 30px;
-}
-
-header ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease 0s;
-}
-
-header ul li a:hover {
-  color: var(--primary);
-  transition: all 0.3s ease 0s;
-}
-
-/* Hero Section */
-section.hero-section {
-  background-color: var(--dark-primary);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 100px 120px 50px 200px;
-}
-
-.hero-section__title {
-  font-size: 48px;
-}
-
-.hero-section__title span {
-  color: var(--primary);
-}
-
-.hero-section__desc {
-  color: #c4c4c4;
-}
-
-.hero-img img {
-  margin-left: 30px;
-  border-radius: 15px;
-}
-
-.social-icons {
-  margin: 18px 0;
-}
-
-ul.social-icons {
-  list-style: none;
-  display: flex;
-}
-
-.social-icons li {
-  margin-right: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 8px 12px;
-}
-
-.social-icons li:hover {
-  background-color: var(--primary);
-  transition: all 0.3s ease 0s;
-}
-
-.social-icons li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.hero-buttons button {
-  margin-right: 10px;
-}
-
-.hero-buttons button > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* buttons */
-.btn {
-  padding: 10px 20px;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.btn.btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-  font-weight: 600;
-}
-
-.btn.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
-}
-
-.btn-dark-outlined {
-  background-color: var(--dark-primary);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-.btn-dark-outlined:hover {
-  cursor: pointer;
-  background-color: var(--primary);
-  color: #fff !important;
-  transition: all 0.3s ease 0s;
-}
-
-/* About Section */
-section.about-section {
-  background-color: #22282f;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-}
-
-.about-img img {
-  width: 250px;
-  height: 250px;
-  padding: 2px;
-  border-radius: 50%;
-  border: 3px solid var(--primary);
-  box-shadow: 3px 5px 30px #03506e;
-  object-fit: cover;
-}
-
-.about-content {
-  margin-left: 100px;
-  max-width: 600px;
-}
-
-.about-content h2 {
-  font-size: 33px;
-}
-
-.about-content h2 > span {
-  color: var(--primary);
-}
-
-.about-content p {
-  color: #c4c4c4;
-  font-size: 15px;
-}
-
-.about-content button {
-  margin-top: 30px;
-  font-size: 15px;
-}
-
-.about-content button > a {
-  text-decoration: none;
-  color: var(--dark-primary);
-}
-
-/* Projects Section */
-section.projects-section {
-  background-color: var(--dark-primary);
-  color: #fff;
-  padding: 50px 120px;
-}
-
-.projects-section h2 {
-  font-size: 28px;
-  text-align: center;
-}
-
-.projects-section h2 > span {
-  color: var(--primary);
-}
-
-.projects-cards {
-  display: flex;
-}
-
-.projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
-  padding: 33px;
-  background-color: #22282f;
-  border-radius: 5px;
-  transition: all 0.5s ease 0s;
-}
-
-.projects-card-box:hover {
-  box-shadow: 3px 5px 20px #03506e;
-  transition: all 0.5s ease 0s;
-  transform: translateY(-2px);
-}
-
-.projects-card-box__icons > i {
-  font-size: 30px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 20px;
-}
-
-.projects-card-box:hover .projects-card-box__icons > i {
-  color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
-}
-
-.projects-card-box__desc h4 {
-  font-size: 18px;
-  margin: 18px 0 10px 0;
-}
-
-.projects-card-box__desc p {
-  font-size: 14px;
-  color: #c4c4c4;
-}
-
-.projects-card-box__buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-card-box__buttons button {
-  background-color: #22282f;
-}
-
-.projects-card-box__buttons button > a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #fff;
-}
-
-/* Achievement Section */
-section.Achievement-section {
-  background-color: var(--dark-primary);
-  color: #fff;
-  padding: 50px 120px;
-}
-
-.Achievement-section h3 {
-  font-size: 28px;
-  text-align: center;
-}
-
-.Achievement-section h3 > span {
-  color: var(--primary);
-}
-
-.Achievement-cards {
-  display: flex;
-}
-
-.Achievement-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
-  padding: 33px;
-  background-color: #22282f;
-  border-radius: 5px;
-  transition: all 0.5s ease 0s;
-}
-
-.Achievement-card-box:hover {
-  box-shadow: 3px 5px 20px #03506e;
-  transition: all 0.5s ease 0s;
-  transform: translateY(-2px);
-}
-
-.Achievement-card-box__icons > i {
-  font-size: 30px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 20px;
-}
-
-.Achievement-card-box:hover .projects-card-box__icons > i {
-  color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
-}
-
-.Achievement-card-box__desc h4 {
-  font-size: 18px;
-  margin: 18px 0 10px 0;
-}
-
-.Achievement-card-box__desc p {
-  font-size: 14px;
-  color: #c4c4c4;
-}
-
-.Achievement-card-box__buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Achievement-card-box__buttons button {
-  background-color: #22282f;
-}
-
-.Achievement-card-box__buttons button > a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #fff;
-}
-
-/* Contact Section */
-section.contact-section {
-  background-color: #22282f;
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  margin: 18px 0;
-}
-
-.contact-section h2 > span {
-  color: var(--primary);
-}
-
-.contact-section form div > input,
-textarea {
-  background-color: #c4c4c4;
-  width: 300px;
-  padding: 5px 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  resize: none;
-  font-family: "Poppins", sans-serif;
-}
-
-.contact-section form div > input:focus,
-textarea:focus {
-  border: 1px solid var(--primary);
-}
-
-.contact-section form div > button {
-  font-size: 14px;
-}
-
-.contact__github {
-  margin-top: 15px;
-}
-
-.contact__github button {
-  padding: 10px 44px;
-  background-color: #171515;
-  font-size: 14px;
-}
-
-.contact__github button > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.contact__github button > a > i {
-  font-size: 16px;
-}
-
-.contact__github button:hover {
-  background-color: #030303;
-}
-
-/* Footer */
-footer {
-  background-color: var(--dark-primary);
-  color: gray;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 13px;
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--primary);
-}
-
-.footer-buttons {
-  margin-top: 10px;
-}
-
-.footer-buttons button {
-  padding: 8px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-.footer__theme1 {
-  color: var(--primary);
-  background-color: transparent;
-  border: 1px solid var(--primary);
-  transition: all 0.5s ease 0s;
-}
-
-.footer__theme1:hover {
-  background-color: var(--primary);
-  color: #fff;
-  transition: all 0.5s ease 0s;
-}
-
-.footer__theme2 {
-  color: #ff5555;
-  background-color: transparent;
-  border: 1px solid #ff5555;
-  transition: all 0.5s ease 0s;
-}
-
-.footer__theme2:hover {
-  background-color: #ff5555;
-  color: #fff;
-  transition: all 0.5s ease 0s;
-}
-
-.footer__theme3 {
-  color: #ff29e4;
-  background-color: transparent;
-  border: 1px solid #ff29e4;
-  transition: all 0.5s ease 0s;
-}
-
-.footer__theme3:hover {
-  background-color: #ff29e4;
-  color: #fff;
-  transition: all 0.5s ease 0s;
-}
-
-.active-theme {
-  background-color: #12bdff;
-  color: white;
-}
-
-/* Media queries */
-@media only screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .logo {
-    margin: auto;
-  }
-
-  header ul {
-    margin-top: 10px;
-  }
-
-  /* Hero Section */
-  section.hero-section {
-    flex-direction: column;
-    padding: 40px;
-    padding-top: 130px;
-  }
-
-  .hero-img img {
-    display: none;
-  }
-
-  /* About Section */
-  section.about-section {
-    flex-direction: column;
-    padding: 40px;
-  }
-
-  .about-content {
-    margin-left: 0;
-    margin-top: 30px;
-  }
-
-  /* Projects Section */
-  section.projects-section {
-    padding: 40px;
-  }
-
-  .projects-cards {
-    margin-top: 15px;
-    flex-direction: column;
-  }
-
-  .projects-card-box {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* Contact Section */
-  .contact-section form div input,
-  textarea {
-    width: 100%;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <title>Mara - Portfolio</title>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <!-- Theme 1 -->
+    <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="./index.html"><span class="logo">My Portfolio</span></a>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">My skill</a></li>
+                <li><a href="#Achievement">Achievement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!</h4>
+                    <h2 class="hero-section__title">I'm <span>Michael Joe</span></h2>
+                    <p class="hero-section__desc">
+                        First-year IT student who enjoys learning about coding, web development,
+                        and technology. I'm excited to build my skills and create more projects
+                        as I grow in the IT field.
+                    </p>
+                </div>
+
+                <!-- Social Icons -->
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/share/17VaS6L7Pu/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@keljo247?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.instagram.com/kel22.eth?igsh=YzljYTk1ODg3Zg%3D%3D" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/Kel22eth" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="hero-img">
+                <img src="assets/img/Keljo.jpg" alt="Michaeljoe-portfolio" width="400">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+
+            <div class="about-img">
+                <img src="assets/img/Michaeljoe.jpg" alt="Michaeljoe-portfolio" width="300">
+            </div>
+
+            <div class="about-content">
+                <h4>About Me</h4>
+                <h2>I'm a BSIT student at <br><span>Samar State University</span></h2>
+
+                <p>
+                    Hello! I’m Michael Joe, currently studying Information Technology as a freshman at
+                    Samar State University. My interests include web development, software basics, and
+                    understanding how different technologies connect. I practice HTML/CSS and enjoy
+                    discovering tools that help my skills grow.
+                </p>
+
+                <button class="btn btn-primary">
+    <a href="#Achievement">View My Achievements</a>
+</button>
+
+        </section>
+        <!-- Skills Section -->
+        <section class="projects-section" id="projects">
+            <h2>My <span>skill</span></h2>
+
+            <div class="projects-cards">
+
+                <div class="projects-card-box">
+                    <div class="projects-card-box__icons"><i class="fas fa-code"></i></div>
+                    <div class="projects-card-box__desc">
+                        <h4>Basic HTML & CSS</h4>
+                        <p>Learning HTML, CSS, and basic programming. Exploring how websites are designed and created.</p>
+                    </div>
+                </div>
+
+                <div class="projects-card-box">
+                    <div class="projects-card-box__icons"><i class="fas fa-laptop-code"></i></div>
+                    <div class="projects-card-box__desc">
+                        <h4>C Programming & Problem Solving</h4>
+                        <p>Understanding variables, loops, conditionals, and problem-solving through simple programs.</p>
+                    </div>
+                </div>
+
+                <div class="projects-card-box">
+                    <div class="projects-card-box__icons"><i class="fas fa-file-alt"></i></div>
+                    <div class="projects-card-box__desc">
+                        <h4>Microsoft Office</h4>
+                        <p>Basic skills in Word, Excel, and PowerPoint for documents, spreadsheets, and presentations.</p>
+                    </div>
+                </div>
+
+                <div class="projects-card-box">
+                    <div class="projects-card-box__icons"><i class="fas fa-photo-video"></i></div>
+                    <div class="projects-card-box__desc">
+                        <h4>Photo / Video Editing</h4>
+                        <p>Basic experience in editing and media literacy for evaluating digital content.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Achievement Section -->
+        <section class="Achievement-section" id="Achievement">
+            <h3>My <span>Achievement</span></h3>
+
+            <div class="Achievement-cards">
+
+                <div class="Achievement-card-box">
+                    <div class="Achievement-card-box__icons">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+
+                    <div class="Achievement-card-box__desc">
+                        <h4>Completed Class Projects</h4>
+                        <p>Sololearn HTML Certificate of Completion</p>
+                        <p>Student Grade Flowchart with matching C code</p>
+                    </div>
+                </div>
+
+                <div class="Achievement-card-box">
+                    <div class="Achievement-card-box__icons">
+                        <i class="fas fa-book"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <div class="Achievement-card-box__desc">
+                        <h4>Improved Coding Skills</h4>
+                        <p>Tutorials and practice helped deepen my understanding of programming basics.</p>
+                    </div>
+                </div>
+
+                <div class="Achievement-card-box">
+                    <div class="Achievement-card-box__icons">
+                        <i class="fas fa-users"></i>
+                        <i class="fas fa-file-powerpoint"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+
+                    <div class="Achievement-card-box__desc">
+                        <h4>Group Project Presentation</h4>
+                        <p>Collaborated on a presentation about programming careers and tech opportunities.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact <span>ME!</span></h2>
+
+            <form>
+                <div><input type="text" name="name" placeholder="Full Name" required></div>
+                <div><input type="email" name="email" placeholder="Email" required></div>
+                <div><textarea name="message" placeholder="Type Message" rows="5"></textarea></div>
+                <div><button class="btn btn-primary">SEND MESSAGE</button></div>
+            </form>
+
+            <div class="contact__github">
+                <button class="btn">
+                    <a href="https://github.com/Raindrop504" target="_blank">
+                        <i class="fa-brands fa-github"></i> Github
+                    </a>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Copyright © 2025 -
+            <a href="https://github.com/Raindrop504" target="_blank">Keljo Mara</a> -
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
