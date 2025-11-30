@@ -178,7 +178,6 @@ section.about-section {
   padding: 2px;
   border-radius: 50%;
   border: 3px solid var(--primary);
-  box-shadow: 3px 5px 30px #03506e;
   object-fit: cover;
 }
 
